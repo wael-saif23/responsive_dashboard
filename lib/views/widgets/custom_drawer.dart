@@ -11,15 +11,19 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(child: CustomDrawerHeader()),
-        DrawerListViewItems(),
-        SliverFillRemaining(
-          hasScrollBody: false,
-
-          child: CustomDrawerFooter())
-      ],
+    return Container(
+      color:  Colors.white,
+      child: const CustomScrollView(
+        
+        slivers: [
+          SliverToBoxAdapter(child: CustomDrawerHeader()),
+          DrawerListViewItems(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+      
+            child: CustomDrawerFooter())
+        ],
+      ),
     );
   }
 }
