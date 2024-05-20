@@ -13,7 +13,7 @@ class DrawerListViewItems extends StatefulWidget {
 }
 
 class _DrawerListViewItemsState extends State<DrawerListViewItems> {
- final List<DrawerItemModel> drawerItems = [
+  final List<DrawerItemModel> drawerItems = [
     const DrawerItemModel(title: "Dashboard", image: Assets.imagesDashboard),
     const DrawerItemModel(
         title: "My Transaction", image: Assets.imagesMyTransctions),
@@ -23,9 +23,9 @@ class _DrawerListViewItemsState extends State<DrawerListViewItems> {
     const DrawerItemModel(
         title: "My Investments", image: Assets.imagesMyInvestments),
   ];
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    int selectedIndex = 0;
     return ListView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -33,16 +33,18 @@ class _DrawerListViewItemsState extends State<DrawerListViewItems> {
       itemBuilder: (BuildContext context, int index) {
         return GestureDetector(
           onTap: () {
-           if (index != selectedIndex) {
-              selectedIndex = index;
-            setState(() {});
-           }
+            if (selectedIndex != index) {
+              setState(() {
+                selectedIndex = index;
+              });
+              print(selectedIndex);
+            }
           },
           child: Padding(
             padding: const EdgeInsets.only(top: 20),
             child: CustomDrawerItem(
               drawerItemModel: drawerItems[index],
-              selected: selectedIndex == index,
+              isSelected: selectedIndex == index,
             ),
           ),
         );
