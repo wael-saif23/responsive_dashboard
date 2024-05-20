@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:responsive_dashboard/utils/app_images.dart';
+
 import 'package:responsive_dashboard/views/widgets/custom_info_list_tile.dart';
+import 'package:responsive_dashboard/views/widgets/drawer_list_view_item.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -12,7 +15,12 @@ class CustomDrawer extends StatelessWidget {
         CustomInfoListTile(
             title: "Lekan Okeowo",
             subtitle: "demo@gmail.com",
-            image: Assets.imagesAvatar3)
+            image: Assets.imagesAvatar3),
+        Divider(
+          thickness: 1.5,
+        ),
+        SizedBox(height: 8),
+        DrawerListViewItems(),
       ],
     );
   }

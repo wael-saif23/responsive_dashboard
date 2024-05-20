@@ -3,5 +3,5 @@ class DrawerItemModel {
 
   final String image;
 
-  DrawerItemModel({required this.title, required this.image});
+ const DrawerItemModel({required this.title, required this.image});
 }
