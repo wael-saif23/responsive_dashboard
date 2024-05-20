@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-import 'package:responsive_dashboard/utils/app_images.dart';
-
-import 'package:responsive_dashboard/views/widgets/custom_info_list_tile.dart';
+import 'package:responsive_dashboard/views/widgets/drawer_footer.dart';
+import 'package:responsive_dashboard/views/widgets/drawer_header.dart';
 import 'package:responsive_dashboard/views/widgets/drawer_list_view_item.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -10,17 +11,14 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        CustomInfoListTile(
-            title: "Lekan Okeowo",
-            subtitle: "demo@gmail.com",
-            image: Assets.imagesAvatar3),
-        Divider(
-          thickness: 1.5,
-        ),
-        SizedBox(height: 8),
+    return const CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(child: CustomDrawerHeader()),
         DrawerListViewItems(),
+        SliverFillRemaining(
+          hasScrollBody: false,
+
+          child: CustomDrawerFooter())
       ],
     );
   }
