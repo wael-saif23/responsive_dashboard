@@ -3,8 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_dashboard/models/drawer_item_model.dart';
 
 class CustomDrawerItem extends StatelessWidget {
-  const CustomDrawerItem({super.key, required this.drawerItemModel});
+  const CustomDrawerItem({super.key, required this.drawerItemModel, required this.selected});
 final DrawerItemModel drawerItemModel ;
+final bool selected ;
   @override
   Widget build(BuildContext context) {
     return ListTile(
