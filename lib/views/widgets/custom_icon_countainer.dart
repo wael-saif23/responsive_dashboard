@@ -6,10 +6,11 @@ class CustomIconCountainer extends StatelessWidget {
       {super.key,
       this.backgroundColor,
       required this.iconImage,
-       this.iconColor});
+      this.iconColor});
   final Color? backgroundColor;
   final Color? iconColor;
   final String? iconImage;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,9 +20,11 @@ class CustomIconCountainer extends StatelessWidget {
           ShapeDecoration(shape: const OvalBorder(), color: backgroundColor),
       child: Center(
           child: SvgPicture.asset(
-        iconImage??"",
-        colorFilter: ColorFilter.mode(iconColor?? Colors.white, BlendMode.srcIn),
-      )),
+                iconImage ?? "",
+                colorFilter: ColorFilter.mode(
+                    iconColor ?? Colors.white, BlendMode.srcIn),
+              ) 
+              ),
     );
   }
 }
