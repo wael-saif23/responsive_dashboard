@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/models/user_info_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/views/widgets/custom_info_list_tile.dart';
 
@@ -13,9 +14,8 @@ class CustomDrawerHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         CustomInfoListTile(
-            title: "Lekan Okeowo",
-            subtitle: "demo@gmail.com",
-            image: Assets.imagesAvatar3),
+          userInfoModel: UserInfoModel(image: Assets.imagesAvatar3, subtitle: "demo@gmail.com", title: "Lekan Okeowo"),
+         ),
         Divider(
           color: Colors.grey,
           endIndent: 15,
