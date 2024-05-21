@@ -11,7 +11,7 @@ class CustomBackgraundContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: padding,
+        padding: padding??const EdgeInsets.all(20),
         decoration: const ShapeDecoration(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(12)),

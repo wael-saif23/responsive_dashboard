@@ -19,7 +19,7 @@ class DashBoardDesktopLayout extends StatelessWidget {
             padding: EdgeInsets.only(top: 40,left: 32,right: 24,bottom: 32),
             child: Column(
               children: [
-                Expanded(child: AllExpenses(),),
+                AllExpenses(),
               ],
             ),
           ),

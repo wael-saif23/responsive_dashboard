@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+import 'package:responsive_dashboard/views/widgets/custom_icon_countainer.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
   const AllExpensesItemHeader(
@@ -10,22 +11,13 @@ class AllExpensesItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          height: 60,
-          width: 60,
-          decoration: ShapeDecoration(
-            shape: const OvalBorder(),
-            color: isActive
-                ? const Color(0xfffafafa).withOpacity(0.15)
-                : const Color(0xffFAFAFA),
-          ),
-          child: Center(
-              child: SvgPicture.asset(
-            image,
-            colorFilter: ColorFilter.mode(
-                isActive ? const Color(0xfffafafa) : const Color(0xff4EB7F2),
-                BlendMode.srcIn),
-          )),
+        CustomIconCountainer(
+          backgroundColor: isActive
+              ? const Color(0xfffafafa).withOpacity(0.15)
+              : const Color(0xffFAFAFA),
+          iconImage: image,
+          iconColor:
+              isActive ? const Color(0xfffafafa) : const Color(0xff4EB7F2),
         ),
         const Spacer(),
         Icon(
