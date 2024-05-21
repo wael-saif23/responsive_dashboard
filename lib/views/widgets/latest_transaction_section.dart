@@ -10,7 +10,7 @@ class LatestTransactionSection extends StatelessWidget {
     return const Column(
       children: [
         Text("Latest Transaction", style: AppStyles.styleRegular16),
-        SizedBox(height: 24),
+        SizedBox(height: 12),
         LatestTransactionListView(),
       ],
     );

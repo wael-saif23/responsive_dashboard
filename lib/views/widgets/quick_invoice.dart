@@ -12,6 +12,7 @@ class QuickInvoice extends StatelessWidget {
       child: Column(
         children: [
           QruickInvoiceHeader(),
+          SizedBox(height: 24),
           LatestTransactionSection(),
         ],
       ),
