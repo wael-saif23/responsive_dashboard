@@ -3,9 +3,15 @@ import 'package:responsive_dashboard/models/all_expenses_item_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/views/widgets/all_expenses_item.dart';
 
-class AllExpensesListView extends StatelessWidget {
+class AllExpensesListView extends StatefulWidget {
   const AllExpensesListView({super.key});
-  static final List<AllExpensesItemModel> itemList = [
+
+  @override
+  State<AllExpensesListView> createState() => _AllExpensesListViewState();
+}
+
+class _AllExpensesListViewState extends State<AllExpensesListView> {
+  final List<AllExpensesItemModel> itemList = [
     const AllExpensesItemModel(
         title: "Balance",
         subtitle: "April 2022",
@@ -22,6 +28,7 @@ class AllExpensesListView extends StatelessWidget {
         image: Assets.imagesExpenses,
         price: 20.129),
   ];
+   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -30,17 +37,33 @@ class AllExpensesListView extends StatelessWidget {
         var itemList = e.value;
         if (index == 1) {
           return Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpensesItem(
-                itemModel: itemList,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedIndex = index;
+                });
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: AllExpensesItem(
+                  isSelected: selectedIndex == index,
+                  itemModel: itemList,
+                ),
               ),
             ),
           );
         } else {
           return Expanded(
-            child: AllExpensesItem(
-              itemModel: itemList,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedIndex = index;
+                });
+              },
+              child: AllExpensesItem(
+                itemModel: itemList,
+                isSelected: selectedIndex == index,
+              ),
             ),
           );
         }
