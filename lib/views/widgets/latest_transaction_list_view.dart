@@ -27,7 +27,10 @@ class LatestTransactionListView extends StatelessWidget {
           children: usersItems
               .map(
                 (e) => IntrinsicWidth(
-                  child: CustomInfoListTile(userInfoModel: e),
+                  child: CustomInfoListTile(
+                    userInfoModel: e,
+                    edgeInsets: const EdgeInsets.only(right: 8),
+                  ),
                 ),
               )
               .toList(),
