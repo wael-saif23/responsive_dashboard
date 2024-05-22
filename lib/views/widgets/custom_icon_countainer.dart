@@ -16,15 +16,15 @@ class CustomIconCountainer extends StatelessWidget {
     return Container(
       height: 60,
       width: 60,
-      decoration:
-          ShapeDecoration(shape: const OvalBorder(), color: backgroundColor),
+      decoration: ShapeDecoration(
+          shape: const OvalBorder(),
+          color: backgroundColor ?? const Color(0xffFAFAFA)),
       child: Center(
           child: SvgPicture.asset(
-                iconImage ?? "",
-                colorFilter: ColorFilter.mode(
-                    iconColor ?? Colors.white, BlendMode.srcIn),
-              ) 
-              ),
+        iconImage ?? "",
+        colorFilter:
+            ColorFilter.mode(iconColor ?? Colors.white, BlendMode.srcIn),
+      )),
     );
   }
 }

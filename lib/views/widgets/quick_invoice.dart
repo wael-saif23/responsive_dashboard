@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/widgets/custom_backgraund_container.dart';
+import 'package:responsive_dashboard/views/widgets/custom_title_text_field.dart';
 import 'package:responsive_dashboard/views/widgets/latest_transaction_section.dart';
 import 'package:responsive_dashboard/views/widgets/qruick_invoice_header.dart';
 
@@ -14,6 +15,13 @@ class QuickInvoice extends StatelessWidget {
           QruickInvoiceHeader(),
           SizedBox(height: 24),
           LatestTransactionSection(),
+          Divider(
+            height: 48,
+          ),
+          CustomTitleTextField(
+            title: 'Customer name',
+            hintText: 'Type customer name',
+          ),
         ],
       ),
     );
