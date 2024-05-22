@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/widgets/custom_backgraund_container.dart';
-import 'package:responsive_dashboard/views/widgets/custom_title_text_field.dart';
 import 'package:responsive_dashboard/views/widgets/latest_transaction_section.dart';
 import 'package:responsive_dashboard/views/widgets/qruick_invoice_header.dart';
+import 'package:responsive_dashboard/views/widgets/quick_invoicer_form.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
@@ -13,16 +13,13 @@ class QuickInvoice extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          QruickInvoiceHeader(),
+          QuickInvoiceHeader(),
           SizedBox(height: 24),
           LatestTransactionSection(),
           Divider(
             height: 48,
           ),
-          CustomTitleTextField(
-            title: 'Customer name',
-            hintText: 'Type customer name',
-          ),
+          QuickInvicerForm()
         ],
       ),
     );
