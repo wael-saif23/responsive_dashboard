@@ -17,6 +17,7 @@ class TransactionSection extends StatelessWidget {
           style:
               AppStyles.styleMedium16.copyWith(color: const Color(0xffAAAAAA)),
         ),
+        const SizedBox(height: 16),
       ],
     );
   }
