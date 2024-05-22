@@ -23,6 +23,8 @@ class MyCardSection extends StatelessWidget {
             child: Column(
               children: [
                 ListTile(
+                  contentPadding:
+                      const EdgeInsets.only(top: 16, left: 32, right: 40),
                   title: const Text(
                     'Name card',
                     style: AppStyles.styleRegular16,
