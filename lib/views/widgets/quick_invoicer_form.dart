@@ -15,16 +15,19 @@ class QuickInvicerForm extends StatelessWidget {
           children: [
             Expanded(
               child: CustomTitleTextField(
-              title: 'Customer name',
-              hintText: 'Type customer name',
-                        ),
-            ),SizedBox(width: 16,),
-         Expanded(
-           child: CustomTitleTextField(
-              title: 'Customer Email',
-              hintText: 'Type customer email',
+                title: 'Customer name',
+                hintText: 'Type customer name',
+              ),
             ),
-         ),
+            SizedBox(
+              width: 16,
+            ),
+            Expanded(
+              child: CustomTitleTextField(
+                title: 'Customer Email',
+                hintText: 'Type customer email',
+              ),
+            ),
           ],
         ),
         SizedBox(height: 24),
@@ -32,22 +35,39 @@ class QuickInvicerForm extends StatelessWidget {
           children: [
             Expanded(
               child: CustomTitleTextField(
-              title: 'Item name',
-              hintText: 'Type customer name',
-                        ),
-            ),SizedBox(width: 16,),
-         Expanded(
-           child: CustomTitleTextField(
-              title: 'Item mount',
-              hintText: 'USD',
+                title: 'Item name',
+                hintText: 'Type customer name',
+              ),
             ),
-         ),
+            SizedBox(
+              width: 16,
+            ),
+            Expanded(
+              child: CustomTitleTextField(
+                title: 'Item mount',
+                hintText: 'USD',
+              ),
+            ),
           ],
         ),
+        SizedBox(height: 24),
         Row(
           children: [
-Expanded(child: CustomButtom(text: 'Send Money',)),
-          ],)
+            Expanded(
+                child: CustomButtom(
+              text: 'Add more details',
+              textColor: Color(0xff4EB7F2),
+              backgroundColor: Colors.transparent,
+            )),
+            SizedBox(
+              width: 16,
+            ),
+            Expanded(
+                child: CustomButtom(
+              text: 'Send Money',
+            )),
+          ],
+        )
       ],
     );
   }
