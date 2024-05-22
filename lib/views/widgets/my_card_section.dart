@@ -21,6 +21,7 @@ class MyCardSection extends StatelessWidget {
               color: const Color(0xff4EB7F2),
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 ListTile(
                   contentPadding:
@@ -34,6 +35,31 @@ class MyCardSection extends StatelessWidget {
                     style: AppStyles.styleMedium20,
                   ),
                   trailing: SvgPicture.asset(Assets.imagesGallery),
+                ),
+                const Expanded(child: SizedBox()),
+                Padding(
+                  padding: const EdgeInsets.only(right: 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        '0918 8124 0042 8129',
+                        style: AppStyles.styleSemiBold24
+                            .copyWith(color: Colors.white),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        '12/20 - 124',
+                        style: AppStyles.styleRegular16
+                            .copyWith(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 27,
                 )
               ],
             ),
