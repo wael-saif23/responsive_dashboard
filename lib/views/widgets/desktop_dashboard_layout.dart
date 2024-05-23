@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dashboard/views/widgets/all_expenses_and_quick_invoce_section.dart';
@@ -17,7 +18,14 @@ class DashBoardDesktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 2,
-          child: AllExpensesAndQuickInvoceSection(),
+          child: Padding(
+            padding: EdgeInsets.all(32.0),
+            child: Column(
+              children: [
+                Expanded(child: AllExpensesAndQuickInvoceSection()),
+              ],
+            ),
+          ),
         ),
         Expanded(
         
