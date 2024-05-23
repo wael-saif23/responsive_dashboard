@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/widgets/all_expenses.dart';
 
@@ -16,7 +17,7 @@ class AllExpensesAndQuickInvoceSection extends StatelessWidget {
         children: [
           AllExpenses(),
           SizedBox(height: 24),
-          QuickInvoice(),
+          Expanded(child: QuickInvoice()),
         ],
       ),
     );

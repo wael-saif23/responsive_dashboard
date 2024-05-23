@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/widgets/custom_backgraund_container.dart';
 import 'package:responsive_dashboard/views/widgets/latest_transaction_section.dart';
@@ -16,8 +17,10 @@ class QuickInvoice extends StatelessWidget {
           QuickInvoiceHeader(),
           SizedBox(height: 24),
           LatestTransactionSection(),
-          Divider(
-            height: 48,
+          Expanded(
+            child: Divider(
+              height: 48,
+            ),
           ),
           QuickInvicerForm()
         ],
