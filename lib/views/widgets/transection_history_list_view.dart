@@ -23,14 +23,11 @@ class TransectionHistoryListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: transectionItems.length,
-      itemBuilder: (BuildContext context, int index) {
-        return TransectionItem(
-          transectionModel: transectionItems[index],
-        );
-      },
+    return Column(
+      children: transectionItems
+          .map((e) => TransectionItem(transectionModel: e))
+          .toList(),
     );
+  
   }
 }
