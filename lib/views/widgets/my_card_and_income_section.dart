@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dashboard/views/widgets/income_section.dart';
@@ -11,12 +11,17 @@ class MyCardAndTransactionAndIncomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.only(top: 40, bottom: 32, right: 24),
-      child: Column(
-        children: [
-          Expanded(flex: 2, child: MyCardAndTransactionSection()),
-          SizedBox(height: 24),
-          Expanded(child: IncomeSection()),
-        ],
+      child: Expanded(
+        child: Column(
+          children: [
+            Expanded(
+              flex: 2,
+              child: SingleChildScrollView(child: MyCardAndTransactionSection())),
+            SizedBox(height: 24),
+            Expanded(
+              child: IncomeSection()),
+          ],
+        ),
       ),
     );
   }
