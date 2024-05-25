@@ -43,11 +43,13 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
                   selectedIndex = index;
                 });
               },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: AllExpensesItem(
-                  isSelected: selectedIndex == index,
-                  itemModel: itemList,
+              child: Flexible(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: AllExpensesItem(
+                    isSelected: selectedIndex == index,
+                    itemModel: itemList,
+                  ),
                 ),
               ),
             ),

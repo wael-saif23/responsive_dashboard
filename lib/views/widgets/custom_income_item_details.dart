@@ -17,13 +17,21 @@ class CustomIncomeItemDetails extends StatelessWidget {
           color: itemDetailsModel.color,
         ),
       ),
-      title:  Text(
-        itemDetailsModel.title,
-        style: AppStyles.styleRegular16,
+      title:  FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          itemDetailsModel.title,
+          style: AppStyles.styleRegular16(context),
+        ),
       ),
-      trailing:  Text(
-        itemDetailsModel.value,
-        style: AppStyles.styleSemiBold16,
+      trailing:  FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          itemDetailsModel.value,
+          style: AppStyles.styleSemiBold16(context),
+        ),
       ),
     );
   }

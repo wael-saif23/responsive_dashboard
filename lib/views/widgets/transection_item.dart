@@ -14,19 +14,23 @@ class TransectionItem extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
       child: ListTile(
-        title: Text(
-          transectionModel.title,
-          style: AppStyles.styleSemiBold16,
+        title: FittedBox(
+          alignment: Alignment.centerLeft,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            transectionModel.title,
+            style: AppStyles.styleSemiBold16(context),
+          ),
         ),
         subtitle: Text(
           transectionModel.date,
-          style: AppStyles.styleRegular16.copyWith(
+          style: AppStyles.styleRegular16(context).copyWith(
             color: const Color(0xffAAAAAA),
           ),
         ),
         trailing: Text(
           transectionModel.amount,
-          style: AppStyles.styleSemiBold20.copyWith(
+          style: AppStyles.styleSemiBold20(context).copyWith(
               color: transectionModel.isWithDrawal
                   ? const Color(0xffF3735E)
                   : const Color(0xff7DD97B)),

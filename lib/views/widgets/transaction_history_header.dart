@@ -8,16 +8,16 @@ class TransactionHistoryHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           'Transaction History',
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         Text(
           'See all',
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         )
       ],
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
@@ -21,18 +22,20 @@ class CustomMyCard extends StatelessWidget {
             color: const Color(0xff4EB7F2),
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               ListTile(
                 contentPadding:
-                    const EdgeInsets.only(top: 16, left: 32, right: 40),
-                title: const Text(
+                    const EdgeInsets.only( top: 8, left: 32, right: 40),
+                title: Text(
                   'Name card',
-                  style: AppStyles.styleRegular16,
+                  style: AppStyles.styleRegular16(context),
                 ),
-                subtitle: const Text(
+                subtitle: Text(
                   'Syah Bandi',
-                  style: AppStyles.styleMedium20,
+                  style: AppStyles.styleMedium20(context),
                 ),
                 trailing: SvgPicture.asset(Assets.imagesGallery),
               ),
@@ -44,23 +47,28 @@ class CustomMyCard extends StatelessWidget {
                   children: [
                     Text(
                       '0918 8124 0042 8129',
-                      style: AppStyles.styleSemiBold24
+                      style: AppStyles.styleSemiBold24(context)
                           .copyWith(color: Colors.white),
                     ),
                     const SizedBox(
-                      height: 12,
+                      height: 8,
                     ),
                     Text(
                       '12/20 - 124',
-                      style: AppStyles.styleRegular16
+                      style: AppStyles.styleRegular16(context)
                           .copyWith(color: Colors.white),
                     ),
                   ],
                 ),
               ),
+              const Flexible(
+                child: SizedBox(
+                  height: 8,
+                ),
+              ),
               const SizedBox(
-                height: 27,
-              )
+                height: 8,
+              ),
             ],
           ),
         ));

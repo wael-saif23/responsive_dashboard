@@ -11,23 +11,22 @@ class RangeOptions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: AppFunctions.customShapeDecoration(),
-      child: const Padding(
-        padding: EdgeInsets.all(12.0),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
         child: Row(
           children: [
             Text(
               "Monthly",
-              style: AppStyles.styleMedium16,
-              
+              style: AppStyles.styleMedium16(context),
             ),
-            SizedBox(width: 18),
-            Icon(Icons.keyboard_arrow_down,color:  Color(0xFF064061),),
+            const SizedBox(width: 18),
+            const Icon(
+              Icons.keyboard_arrow_down,
+              color: Color(0xFF064061),
+            ),
           ],
         ),
       ),
     );
   }
-
- 
 }
-

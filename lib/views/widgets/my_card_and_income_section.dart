@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dashboard/views/widgets/income_section.dart';
@@ -14,12 +13,9 @@ class MyCardAndTransactionAndIncomeSection extends StatelessWidget {
       child: Expanded(
         child: Column(
           children: [
-            Expanded(
-              flex: 2,
-              child: SingleChildScrollView(child: MyCardAndTransactionSection())),
+            MyCardAndTransactionSection(),
             SizedBox(height: 24),
-            Expanded(
-              child: IncomeSection()),
+            IncomeSection(),
           ],
         ),
       ),
