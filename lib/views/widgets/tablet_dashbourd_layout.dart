@@ -22,7 +22,9 @@ class DashBoardTabletLayout extends StatelessWidget {
           flex: 2,
           child: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.all(32),
+              padding: 
+              
+              EdgeInsets.all(32),
               child: Column(
                 children: [
                   AllExpensesAndQuickInvoceSection(),

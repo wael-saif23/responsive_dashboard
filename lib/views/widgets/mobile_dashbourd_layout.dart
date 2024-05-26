@@ -8,16 +8,18 @@ class MobileDashbourdLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    double width = MediaQuery.of(context).size.width;
+    return SingleChildScrollView(
       child: Padding(
-        
-        padding: EdgeInsets.only(right: 32, left: 32, bottom: 32),
-        child: Column(
+        padding: width < 800
+            ? const EdgeInsets.only(right: 16, left: 16, bottom: 16)
+            : const EdgeInsets.only(right: 32, left: 32, bottom: 32),
+        child: const Column(
           children: [
             AllExpensesAndQuickInvoceSection(),
-            SizedBox(height: 24),
+            SizedBox(height: 12),
             MyCardAndTransactionSection(),
-            SizedBox(height: 24),
+            SizedBox(height: 12),
             IncomeSection()
           ],
         ),

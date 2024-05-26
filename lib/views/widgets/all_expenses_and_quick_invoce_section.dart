@@ -11,11 +11,12 @@ class AllExpensesAndQuickInvoceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    double width = MediaQuery.of(context).size.width;
+    return Column(
       children: [
-        AllExpenses(),
-        SizedBox(height: 24),
-        QuickInvoice(),
+        const AllExpenses(),
+        SizedBox(height: width < 800 ? 12 : 24),
+        const QuickInvoice(),
       ],
     );
   }

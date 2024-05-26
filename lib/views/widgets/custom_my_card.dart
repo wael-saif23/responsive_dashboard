@@ -28,7 +28,7 @@ class CustomMyCard extends StatelessWidget {
             children: [
               ListTile(
                 contentPadding:
-                    const EdgeInsets.only( top: 8, left: 32, right: 40),
+                    const EdgeInsets.only( top: 4, left: 32, right: 32),
                 title: Text(
                   'Name card',
                   style: AppStyles.styleRegular16(context),
@@ -48,10 +48,10 @@ class CustomMyCard extends StatelessWidget {
                     Text(
                       '0918 8124 0042 8129',
                       style: AppStyles.styleSemiBold24(context)
-                          .copyWith(color: Colors.white),
+                          .copyWith(color: Colors.white,fontSize: MediaQuery.sizeOf(context).width <800 ?18 : 24),
                     ),
                     const SizedBox(
-                      height: 8,
+                      height: 4,
                     ),
                     Text(
                       '12/20 - 124',
@@ -67,7 +67,7 @@ class CustomMyCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 8,
+                height: 4,
               ),
             ],
           ),

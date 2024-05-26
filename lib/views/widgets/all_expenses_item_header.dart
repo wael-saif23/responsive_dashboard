@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:responsive_dashboard/views/widgets/custom_icon_countainer.dart';
 
@@ -20,9 +21,11 @@ class AllExpensesItemHeader extends StatelessWidget {
               isActive ? const Color(0xfffafafa) : const Color(0xff4EB7F2),
         ),
         const Spacer(),
-        Icon(
-          Icons.keyboard_arrow_right,
-          color: isActive ? Colors.white : const Color(0xFF064061),
+        Flexible(
+          child: Icon(
+            Icons.keyboard_arrow_right,
+            color: isActive ? Colors.white : const Color(0xFF064061),
+          ),
         ),
       ],
     );

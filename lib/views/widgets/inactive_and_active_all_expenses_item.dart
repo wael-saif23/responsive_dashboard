@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
 import 'package:responsive_dashboard/utils/functions.dart';
 import 'package:responsive_dashboard/views/widgets/all_expenses_item_header.dart';
@@ -18,7 +20,10 @@ class InActiveAllExpensesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      decoration: AppFunctions.customShapeDecoration(),
+      decoration: AppFunctions.customShapeDecoration(
+          borderColor:  Colors.grey.shade300,
+        color: Colors.white,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -27,19 +32,31 @@ class InActiveAllExpensesItem extends StatelessWidget {
             image: itemModel.image,
           ),
           const SizedBox(height: 34),
-          Text(
-            itemModel.title,
-            style: AppStyles.styleSemiBold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              itemModel.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
           const SizedBox(height: 8),
-          Text(
-            itemModel.subtitle,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              itemModel.subtitle,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(height: 16),
-          Text(
-            "\$${itemModel.price}",
-            style: AppStyles.styleSemiBold16(context),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "\$${itemModel.price}",
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
         ],
       ),
@@ -73,24 +90,36 @@ class ActiveAllExpensesItem extends StatelessWidget {
             image: itemModel.image,
           ),
           const SizedBox(height: 34),
-          Text(
-            itemModel.title,
-            style: AppStyles.styleSemiBold16(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              itemModel.title,
+              style: AppStyles.styleSemiBold16(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
           const SizedBox(height: 8),
-          Text(
-            itemModel.subtitle,
-            style: AppStyles.styleRegular14(context).copyWith(
-              color: const Color(0xffFAFAFA),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              itemModel.subtitle,
+              style: AppStyles.styleRegular14(context).copyWith(
+                color: const Color(0xffFAFAFA),
+              ),
             ),
           ),
           const SizedBox(height: 16),
-          Text(
-            "\$${itemModel.price}",
-            style: AppStyles.styleSemiBold24(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "\$${itemModel.price}",
+              style: AppStyles.styleSemiBold24(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
         ],
